@@ -1,452 +1,526 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sabrina Herbst">
+    <title>Sabrina Herbst</title>
     <style>
-
-        :root {
-        --blue: #5B84B1FF;
-        --secondary: #FC766AFF;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --primary-col:#5876d1;
+            --bg-col:white;
+        
+            --highlight-col:#f18130;
+            --textbox-col:#cc856c;
         }
-    
-        h1, h2, h3, h4, p, li {
-            font-family:'Poppins', sans-serif;
-        }
-
-        h1 {
-            color:var(--blue)
-        }
-
-        h2 {
-            color:var(--blue)
-        }
-
-        p, li {
-            font-size: 0.9em;
-        }
-
-        body {
-            margin:50px;
-        }
-
-        img {
-          width: 200px;
-          height: auto;
-          border-radius: 50%;
-          margin-right: 25px;
-        }
-    
-        #header {
-            display:flex;
+        /* Ensure the footer stays at the bottom if content is short */
+        html, body {
+            height: 100%; /* Ensure full height of the page */
+            width: 100%;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
             justify-content: center;
             align-items: center;
-            margin:2em;
+            font-family: "Courier New", sans-serif;
+            margin: 0;
         }
 
-        .section_header {
-            font-size:2.5vw;
-            font-weight:400;
+        h1{
+            color: var(--highlight-col);
+            margin-bottom: 20px;
         }
-
-        .section_subheader {
-            font-size:1.5vw;
-            font-weight:100;
-        }
-
-        .section_subsubheader {
-            font-size:1vw;
-            font-weight:100;
-        }
-
         .container {
-            width: 95%;
-            max-width: 1220px;
-            margin: 0 auto;
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+            overflow: auto; /* Changed to auto to allow scrolling when needed */
+            margin: 20p auto x 0px auto; /* Centers the container */
+            flex: 1;
         }
 
-        .list {
-            display:grid;
-            grid-template-columns: 1fr 3fr;
-            position:relative;  
-        }
-
-        .list_number {
-            font-size: 2vw;
-            font-weight: 100;
-            padding: 2px 0;
-            position: sticky;
-            top: 0;
-            text-align: right;
-            padding-right:20px;
-            height: calc(2vw + 20px);
-            color: var(--secondary)
-        }
-
-        .list_content {
-            border-top: 2px solid black;
-            padding: 15px 0;
-        }
-
-        .misc {
-            list-style-type: none;
-            counter-reset: li;
-        }
-
-        .misc_li::before {
-            counter-increment: li;
-            content: counter(li, decimal-leading-zero);
-            color:var(--secondary);
-            margin-right: 0.25em;
-            font-size: 1.5em;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight:800;
-        }
 
         .socialmedia {
-            margin-top:10px;
-            margin-bottom:10px;
-        }
-
-        .socialmedia a {
-            margin-right:10px;
-            text-decoration: none;
-            color: black;
-        }
-
-        .location_time {
-            display: flex;
-            justify-content: end;
-        }
-        .location_time p  {
-            margin-right: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-style: italic;
-        }
-
-        .institution {
-            font-weight:bold;
-        }
-
-        .instit_loc{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 20px;
         }
-        </style>
 
-    <header>
-        <div id="header">
-            <img src="IMG_3279.jpg" alt="Image of Sabrina Herbst"/>
-            <div id="name_intro">
-                <h1>Sabrina Herbst</h1>
-                <p>PhD candidate at TU Wien (Vienna, Austria).</p>
-                <p>I work on <b>Quantum Computing</b>, specifically, <b>Algorithms, Machine Learning</b> and <b>HPC integration</b>.</p>
-                <div class="socialmedia">
-                    <a href="https://www.github.com/sabrinaherbst">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                          </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sabrina-herbst-03578b1b6/?locale=en_US">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                          </svg>
-                    </a>
-                    <a href="https://bsky.app/profile/sabrinaherbst.bsky.social">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bsky-x" viewBox="0 0 511.999 452.266">
-                            <path d="M110.985 30.442c58.695 44.217 121.837 133.856 145.013 181.961 23.176-48.105 86.322-137.744 145.016-181.961 42.361-31.897 110.985-56.584 110.985 21.96 0 15.681-8.962 131.776-14.223 150.628-18.272 65.516-84.873 82.228-144.112 72.116 103.55 17.68 129.889 76.238 73 134.8-108.04 111.223-155.288-27.905-167.385-63.554-3.489-10.262-2.991-10.498-6.561 0-12.098 35.649-59.342 174.777-167.382 63.554-56.89-58.562-30.551-117.12 72.999-134.8-59.239 10.112-125.84-6.6-144.112-72.116C8.962 184.178 0 68.083 0 52.402c0-78.544 68.633-53.857 110.985-21.96z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/_sabrinaherbst">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                          </svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=5q200IsAAAAJ&hl=de&oi=ao">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" 
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" >
-<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M25,3
-	C12.85,3,3,12.85,3,25s9.85,22,22,22s22-9.85,22-22S37.15,3,25,3z"/>
-<path d="M37,17.277V12c0-0.043-0.019-0.08-0.025-0.122L38,11H21l-10,9h6.782c0.02,2.847,2.186,5.73,5.988,5.73
-	c0.36,0,0.76-0.04,1.16-0.08c-0.18,0.45-0.37,0.82-0.37,1.43c0,1.15,0.58,1.84,1.09,2.5c-1.63,0.11-4.66,0.3-6.89,1.69
-	c-2.13,1.29-2.78,3.16-2.78,4.48c0,2.72,2.52,5.25,7.75,5.25c6.2,0,9.49-3.49,9.49-6.94c0-2.53-1.44-3.78-3.03-5.14l-1.29-1.03
-	c-0.4-0.32-0.95-0.77-0.95-1.57c0-0.81,0.55-1.33,1.02-1.81c1.51-1.2,3.03-2.55,3.03-5.27c0-1.043-0.243-1.892-0.591-2.59L35,13.571
-	v3.706c-0.595,0.346-1,0.984-1,1.723v6c0,1.104,0.896,2,2,2s2-0.896,2-2v-6C38,18.262,37.595,17.624,37,17.277z M30.8,35.49
-	c0,2.27-1.83,3.97-5.3,3.97c-3.86,0-6.34-1.87-6.34-4.48s2.3-3.48,3.1-3.78c1.51-0.52,3.46-0.59,3.78-0.59c0.37,0,0.55,0,0.84,0.04
-	C29.62,32.63,30.8,33.62,30.8,35.49z M27.92,23.67c-0.58,0.59-1.55,1.03-2.46,1.03c-3.09,0-4.51-4.08-4.51-6.54
-	c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C28.82,21.65,28.74,22.82,27.92,23.67z"/>
-</svg>
-                    </a>
-                    <a href="https://medium.com/@sabrinaherbst">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16">
-                            <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/>
-                          </svg>
-                    </a>                   
-                    
-                </div>
-            </div>   
-        </div>
-    </header>
+        .left-section {
+    width: 30%;
+    color: black;
+    padding: 20px;
+    border-radius: 2%;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+        .left-section img {
+            width: 80%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid var(--highlight-col);
+        }
+        .left-section h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .left-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .left-section a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            transition: color 0.2s ease;
+            transition: font-weight 0.2s ease;
+        }
+        .left-section a:hover {
+            color: var(--highlight-col);
+            font-weight: bold;
 
-    <body>
-        <h2 class="section_header">Education</h2>
-        <ul class="container">
-            <li class="list">
-                <p class="list_number">Dr.<sup>techn.in.</sup></p>
-                <div class="list_content">
-                    <h3>Doctor in Engineering Sciences (Computer Science)</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>03/2024 - today</p>
-                        </div>
-                    </div>
-                    <p>I do research on the intersection of <b>Quantum Computing</b>, in particular, Algorithms, Machine Learning and HPC.</p>
-                    <p>Our newest paper <b>"Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks"</b> has been accepted to ICLR 2025 <a href="https://arxiv.org/abs/2410.09470">(Link)</a>. It discusses an ansatz-centric perspective on training dynamics in QNNs.</p>
-                    <p>Our research paper <b>"On Optimizing Hyperparameters for Quantum Neural Networks"</b> <a href="https://doi.org/10.1109/QCE60285.2024.00174">(Link)</a>, which I submitted 1 month into my PhD, was accepted at QCE 2024.</p>
-                    <p>I am supervised by Univ.Prof.<sup>in</sup> Dr.<sup>in</sup> Ivona Brandić at the <a href="https://hpc.ec.tuwien.ac.at/">HPC research group</a>.</p>
-                    </p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">Dipl.-Ing.<sup>in</sup></p>
-                <div class="list_content">
-                    <h3>Master of Science (Data Science)</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>10/2021 - 11/2023</p>
-                        </div>
-                    </div>
-                    <p>Focussed on <b>Machine Learning</b> and <b>Big Data & High Performance Computing</b>.</p>
-                    <p>I received funding to do an internship at Mercedes-Benz Tech Innovation through the <b>Erasmus+</b> program in 2021.</p>
-                    <p>Morover, I managed to publish our research paper <b>"Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case"</b> <a href="https://link.springer.com/chapter/10.1007/978-3-031-50684-0_14">(Link)</a> at the QuickPar workshop at Euro-Par 2023 already during my master's degree.</p>
-                    <p><b>Thesis:</b> Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperparameter Optimization in Quantum Machine Learning <a href="https://repositum.tuwien.at/handle/20.500.12708/189283">(Link)</a>.</p>
-                    <p><b>Supervisor: </b>Univ.Prof.<sup>in</sup> Dr.<sup>in</sup> Ivona Brandić
-                        <p><b>Graduated with distinction.</b> I obtained a GPA of 1.0. Furthermore, I was awarded the Siemens Award of Excellence at the 1<sup>st</sup> TU Wien informatics award ceremony for my academic achievements <a href="https://www.tuwien.at/tu-wien/aktuelles/news/news/tu-wien-informatics-awards-das-erste-mal-vergeben">(Link)</a>.</p>
-                    </p>
-                </div>
-            </li>
-                
-            <li class="list">
-                <p class="list_number">B.Sc.</p>
-                <div class="list_content">
-                    <h3>Bachelor of Science (Business Informatics)</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p> 
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>10/2018 - 09/2021</p>
-                        </div>
-                        
-                    </div>
-                    
-                    <p>Focussed on <b>Information Technology</b>.</p>
-                    <p><b>Thesis:</b> Analysis of Bacteriophage Cocktails: Predicting Hosts of Bacteriophages Based on Molecular Sequence Data <a href="https://drive.google.com/file/d/16hJ06sBW83TeFCv-10kMqc-U1cOnI3ay/view?usp=sharing">(Link)</a>.</p>
-                    <p><b>Supervisor: </b>Univ.Prof. Dr. Thomas Gärtner</p>
-                    <p><b>Graduated with distinction.</b> I obtained a GPA of 1.4. Moreover, I was awarded the Huawei Seeds for the Future scholarship for my academic achievements <a href="https://www.tuwien.at/tu-wien/aktuelles/news/news/44-mint-studierende-freuen-sich-ueber-digitalisierungsstipendium">(Link)</a> and am a two-times recipient of the merit-based scholarship at TU Wien.</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">Matura</p>
-                <div class="list_content">
-                    <h3>Matura (upper secondary school)</h3>
-                    <div class="instit_loc">
-                        <p class="institution">B.ORG Dornbirn-Schoren</p>
-                        <div class="location_time">
-                            <p>Dornbirn, Austria</p>
-                            <p>09/2014 - 06/2018</p>
-                        </div>
-                    </div>
-                    <p>My upper secondary school had a focus on <b>Music</b>. I played the clasical guitar for about 10 years and received singing lessons.</p>
-                    <p><b>Graduated with distinction.</b> GPA 1.14</p>
-                </div>
-            </li>
-        </ul>
+        }
 
-        <h2 class="section_header">Professional</h2>
-        <ul class="container">
-            <li class="list">
-                <p class="list_number">TU Wien</p>
-                <div class="list_content">
-                    <h3>Project Assistant (Prae-Doc) FWF</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>03/2024 - today</p>
-                        </div>
-                    </div>
-                    <p>I do research on <b>Quantum Computing</b>, specifically, <b>Algorithms, Machine Learning</b> and the <b>integration of HPC</b>.</p>
-                    <p>My work is funded through the <a href="https://www.fwf.ac.at/forschungsradar/10.55776/P36870">Triton - Transprecise Edge Computing</a> project of FWF.</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">ETH Zürich</p>
-                <div class="list_content">
-                    <h3>Student Summer Research Fellowship</h3>
-                    <div class="instit_loc">
-                        <p class="institution">ETH Zürich</p>
-                        <div class="location_time">
-                            <p>Zürich, Switzerland</p>
-                            <p>07/2023 - 08/2023</p>
-                        </div>
-                    </div>
-                     <p>I was accepted for a 20-person programme out of 2,500 applicants to take part in the two-month <b>Student Summer Research Fellowship</b> at ETH Zürich.</p>
-                     <p>I was working on the efficiency of Large Language Models, in particular, finding ways to prune the models without the need to retrain afterwards.</p>
-                     <p><b>Supervisor: </b>Prof. Thomas Hofmann</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">TU Wien</p>
-                <div class="list_content">
-                    <h3>Student Researcher</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>05/2023 - 03/2024</p>
-                        </div>
-                    </div>
-                    <p>I worked on benchmarking hyperparameters of Quantum Machine Learning models with the goal of providing researchers and practitioners with good starting points for model architectures.</p>
-                    <p>The work is published in my master's thesis <b>"Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperaparameter Optimization in Quantum Machine Learning"</b> <a href="https://repositum.tuwien.at/handle/20.500.12708/189283">(Link)</a>, as well as, partly, in our paper <b>"Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case"</b> <a href="https://link.springer.com/chapter/10.1007/978-3-031-50684-0_14">(Link)</a> from the QuickPar workshop at Euro-Par 2023.</p>
-                    <p>The work was partially funded through the <a href="https://projekte.ffg.at/projekt/4562957">High-Performance integrated Quantum Computing (HPQC)</a> project of FFG, where TU Wien, the University of Innsbruck, the University of Linz, Math.Tec, Alpine Quantum Technologies and IBM Research work on integrating Quantum Computers into the Cloud continuum. Furthermore, it was funded through the <a href="https://www.fwf.ac.at/forschungsradar/10.55776/P36870">Triton - Transprecise Edge Computing</a> project of FWF.</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">MBTI</p>
-                <div class="list_content">
-                    <h3>Internship Electric Vehicles</h3>
-                    <div class="instit_loc">
-                        <p class="institution">Mercedes-Benz Tech Innovation</p>
-                        <div class="location_time">
-                            <p>Stuttgart, Germany</p>
-                            <p>03/2022 - 05/2022</p>
-                        </div>
-                    </div>
-                    <p>I conducted Data Science projects in the electric vehicle environment. The work included identifying and preprocessing appropriate datasets, as well as investigating, training and the evaluation of <b>Natural Language Processing (NLP) models</b>.</p>
-                    <p>I got funding for the working experience abroad through the <b>Erasmus+</b> program.</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">HCM
-                </p>
-                <div class="list_content">
-                    <h3>Junior SAP Consultant</h3>
-                    <div class="instit_loc">
-                        <p class="institution">HCM ADVICE</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>02/2021 - 12/2021</p> 
-                      </div>
-                    </div>                    
-                    <p>I analyzed customer requirements and identified optimization potential. Further, I resolved customer tickets in SAP SuccessFactors and SAP HCM and communicated about ongoing progress with customers</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">TU Wien</p>
-                <div class="list_content">
-                    <h3>Tutor</h3>
-                    <div class="instit_loc">
-                        <p class="institution">TU Wien</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>10/2019 - 02/2021</p>
-                        </div>
-                    </div>                    
-                    <p>Throughout my bachelor's degree, I was asked to be a tutor in the classes <b>"Introduction to Programming 1"</b>, <b>"Fundamentals of Programming & Algorithms"</b> and the <b>"Remedial Course for Informatics"</b>.</p>
-                    <p>I had to opportunity to work directly with the studens by helping them with their classwork and checking their exercises.</p>
-                </div>
-            </li>
-            <li class="list">
-                <p class="list_number">AIT</p>
-                <div class="list_content">
-                    <h3>Internship</h3>
-                    <div class="instit_loc">
-                        <p class="institution">Austrian Institute of Technology</p>
-                        <div class="location_time">
-                            <p>Vienna, Austria</p>
-                            <p>07/2020 - 09/2020</p>
-                        </div>
-                    </div>
-                    
-                    <p>Throughout this internship, I helped create the Austrian Startup Monitor. In particular, I was doing research on startups in Austria and maintained the database.</p>
-                </div>
-                </li>
-        </ul>
+        ul {
+            margin:20px;
+            padding: 0
+        }
 
-<h2 class="section_header">Research</h2>
+        li {
+            text-align: left;
+            word-wrap: break-word;
+        }
 
-
-<h3 class="section_subheader">Papers</h3>
-<p>Throughout the last year, I have been working on Quantum Machine Learning. Here are the publications and preprints I have been involved in:</p>
-
-    <h4 class="section_subsubheader">Publications</h4>
-        <ol class="misc">
-            <li class="misc_li"><b>Herbst, S.</b>, Cranganore, S.S., De Maio, V., Brandić, I. (2024). <b>"Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks"</b>. In: The Thirteenth International Conference on Learning Representations (ICLR) 2025, Singapore, Apr 24-28, 2025. <a href="https://openreview.net/forum?id=gDcL7cgZBt">openreview.com</a>.<br> 
-                The preprint of our work is available <a href="https://arxiv.org/abs/2410.09470">on Arxiv</a>. We propose an ansatz-centric perspective on QNNs. In particular, from the literature, we gather results that heuristically show that having an ansatz form an (approximate) 2-design is not a sufficient criterion for expressivity. Further, we study distinguishability of quantum channels upon perturbing parameters (i.e., similar to a parameter update during training), suggesting many parameters are required to be able to distinguish the QNN from itself upon parameter update, contrasting with the initial framework. The behavior we find on an architectural level has remarkable resemblance to the Barren Plateau phenomenon, suggesting that the architectures themselves are fundamentally flawed.</li>
-            <li class="misc_li"><b>Herbst, S.</b>, De Maio, V., Brandić, I. (2024). <b>"On Optimizing Hyperparameters for Quantum Neural Networks"</b>. In: 2024 IEEE International Conference on Quantum Computing and Engineering (QCE), Montreal, QC, Canada, 2024, pp. 1478-1489. doi: <a href="https://doi.org/10.1109/QCE60285.2024.00174">10.1109/QCE60285.2024.00174</a>.<br> 
-                We benchmarked a variety of different hyperparameters on four problems. We included parameter initialization strategies for mitigating trainability issues, such as Barren Plateaus. Furthremore, given the noise inherent in NISQ technology, we included noise in the simulators to compare with the noiseless simulations.</li>
-            <li class="misc_li"><b>Herbst, S.</b>, De Maio, V., Brandic, I. (2024). <b>"Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case"</b>. In: Zeinalipour, D., et al. Euro-Par 2023: Parallel Processing Workshops. Euro-Par 2023. Lecture Notes in Computer Science, vol 14351. Springer, Cham. doi: <a href="https://doi.org/10.1007/978-3-031-50684-0_14">10.1007/978-3-031-50684-0_14</a>. Limassol, Cyprus<br>
-                We wrote a paper for the QuickPar workshop at Euro-Par 2023 on our idea of the Quantum Edge, which is available <a href="https://link.springer.com/chapter/10.1007/978-3-031-50684-0_14">here</a>. The paper made it into <b>Quantum Zeitgeist</b>, where it was summarized. The article can be found <a href="http://quantumzeitgeist.com/vienna-university-researchers-develop-quantum-edge-for-efficient-iot-data-streaming/">here</a>.</li>
-            </ol>
-            
-        <h4 class="section_subsubheader">Theses</h4>
-        <ol class="misc">
-            <li class="misc_li"><b>Herbst, S.</b> (2023). <b>"Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperparameter Optimization in Quantum Machine Learning</b> (Diploma Thesis, Wien). doi: <a href="https://doi.org/10.34726/hss.2023.111504">10.34726/hss.2023.111504</a>.<br>
-                <a href="https://repositum.tuwien.at/handle/20.500.12708/189283">Here</a> is the link to my master's thesis. We benchmarked diffferent hyperparameter configurations for Quantum Machine Learning models and compared them to classical Machine Learning models, with the goal of providing researchers and practitioners good starting points and a reduced search space for hyperparameter optimization.</li>
         
-        </ol>
+.right-section {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+        
+        /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+        .container::-webkit-scrollbar {
+            width: 0px; /* Hide scrollbar */
+            height: 0px; /* For horizontal scrollbar */
+        }
 
-    <h3 class="section_subheader">Presentations</h3>
-    <p>Furthemore, I have had the opportunity to present our work at the QuickPar workshop at Euro-Par 2023 and gave some invited talks in different research groups. Below is a presentations of talks I held.</p>
-        <ol class="misc">
-            <li class="misc_li"><b>On Optimizing Hyperparameters for Quantum Neural Networks</b>. <i>IEEE International Conference on Quantum Computing and Engineering (QCE). 2024.</i> Montreal, Canada.</li>
-            <li class="misc_li"><b>AI for Communication in Hybrid Classic Quantum Systems</b>. <i>CAIML Symposium. 2024.</i> Vienna, Austria.</li>
-            <li class="misc_li"><b>On Hyperparameter Optimization in Quantum Neural Networks</b>. <i>Quantum Optics and Spectroscopy. Institute for Experimental Physics. Universität Innsbruck. 2024.</i> Innsbruck, Austria.</li>
-            <li class="misc_li"><b>Beyond 0’s and 1’s ‑ Exploring the Complexities of Noise, Data Encoding, and Hyperparameter Optimization in Quantum Machine Learning</b> (remote). <i>National Physical Laboratory (NPL). 2023.</i> London, UK.</li>
-            <li class="misc_li"><b>Beyond 0’s and 1’s ‑ Exploring the Complexities of Noise, Data Encoding, and Hyperparameter Optimization in Quantum Machine Learning</b>. <i>Walther Group. Faculty of Physics. University of Vienna. 2023.</i> Vienna, Austria.</li>
-            <li class="misc_li"><b>Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case</b>. <i>QuickPar Workshop at EuroPar 2023.</i> Limassol, Cyprus.</li>
-        </ol>
+        /* Optional: For Firefox */
+        .container {
+            scrollbar-width: thin; /* Thin scrollbar, but it still exists */
+            scrollbar-color: transparent transparent; /* Make the scrollbar invisible */
+        }
 
-    <h3 class="section_subheader">Teaching</h3>
-        <ol class="misc">
-            <li class="misc_li"><b>Hybrid Quantum-Classical Systems</b>. <i>TU Wien. 2024.</i> I teach the lecture on Quantum Machine Learning and help in assignment preparation.</li>
-        </ol>
+        .right-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-col);
+            margin-bottom: 20px;
+        }
+        .right-section h3 {
+            font-size: 1.4rem;
+            color: var(--primary-col);
+            margin-bottom: 10px;
+        }
+        .right-section h4 {
+            font-size: 1.1rem;
+            color: var(--primary-col);
+            margin-bottom: 10px;
+        }
+        .right-section p, ul {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .right-section span {
+            font-size: 1rem;
+        }
+
+        .right-section strong {
+            color : var(--textbox-col);
+        }
+
+        .education {
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        footer {
+            width: 100%;
+            border-top: 0.15rem solid var(--primary-col);
+            text-align: center;
+            padding: 20px;
+            background-color: #fff; /* Add background color for visibility */
+            position: relative; /* Allows the footer to move with content */
+        }
+
+        /* Menu styling */
+        .menu {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center the items horizontally */
+            justify-content: center; /* Center the items vertically */
+        }
+
+        .menu li {
+            margin: 0 15px; /* Spacing between list items */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+
+        .foldable-container {
+        margin: 20px;
+        }
+
+        .foldable-paragraph {
+        display: none;
+        margin-top: 10px;
+        }
+
+        .toggle-text {
+        font-size: 18px;
+        color: #007BFF;
+        cursor: pointer;
+        text-decoration: underline;
+        }
+
+        .toggle-text:hover {
+        color: #0056b3;
+        }
+
+                /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            .left-section, .right-section {
+                width: 100%; /* Stacks the sections on smaller screens */
+                margin-bottom: 20px; /* Adds spacing between the sections */
+            }
+
+            .container {
+                width: 60%; /* Ensures the container takes up more space on small screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left-section, .right-section {
+                width: 100%; /* Stacks the sections on smaller screens */
+                margin-bottom: 20px; /* Adds spacing between the sections */
+            }
+
+
+            .container {
+                width: 90%; /* Ensures the container takes up more space on small screens */
+            }
+
+            .menu {
+                list-style: none; /* Remove bullet points */
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center the items horizontally */
+                justify-content: center; /* Center the items vertically */
+            }
+
+            .right-section {
+                border-left: none;
+
+            }
+
+            .menu li {
+                margin: 0; /* Space between items when stacked vertically */
+            }
+
+            .menu a {
+                font-size: 20px; /* Larger font size for mobile */
+                padding: 0;
+            }
+        }
+
+    @media (max-width: 480px) {
+        .left-section, .right-section {
+            width: 100%; /* Full width on very small screens */
+            padding: 10px; /* Reduces padding on smaller screens */
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-section">
+        <img src="IMG_3279.jpg" alt="Picture of Sabrina Herbst">
+        <h1>Sabrina Herbst</h1>
+        <p>PhD student at TU Wien working on Quantum Computing</p>
+        <div class="socialmedia">
+            <a href="https://www.github.com/sabrinaherbst">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sabrina-herbst-03578b1b6/?locale=en_US">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+            </a>
+            <a href="https://bsky.app/profile/sabrinaherbst.bsky.social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bsky-x" viewBox="0 0 511.999 452.266">
+                    <path d="M110.985 30.442c58.695 44.217 121.837 133.856 145.013 181.961 23.176-48.105 86.322-137.744 145.016-181.961 42.361-31.897 110.985-56.584 110.985 21.96 0 15.681-8.962 131.776-14.223 150.628-18.272 65.516-84.873 82.228-144.112 72.116 103.55 17.68 129.889 76.238 73 134.8-108.04 111.223-155.288-27.905-167.385-63.554-3.489-10.262-2.991-10.498-6.561 0-12.098 35.649-59.342 174.777-167.382 63.554-56.89-58.562-30.551-117.12 72.999-134.8-59.239 10.112-125.84-6.6-144.112-72.116C8.962 184.178 0 68.083 0 52.402c0-78.544 68.633-53.857 110.985-21.96z"/>
+                </svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=5q200IsAAAAJ&hl=de&oi=ao">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi" viewBox="0 0 50 50" >
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M25,3
+C12.85,3,3,12.85,3,25s9.85,22,22,22s22-9.85,22-22S37.15,3,25,3z"/>
+<path d="M37,17.277V12c0-0.043-0.019-0.08-0.025-0.122L38,11H21l-10,9h6.782c0.02,2.847,2.186,5.73,5.988,5.73
+c0.36,0,0.76-0.04,1.16-0.08c-0.18,0.45-0.37,0.82-0.37,1.43c0,1.15,0.58,1.84,1.09,2.5c-1.63,0.11-4.66,0.3-6.89,1.69
+c-2.13,1.29-2.78,3.16-2.78,4.48c0,2.72,2.52,5.25,7.75,5.25c6.2,0,9.49-3.49,9.49-6.94c0-2.53-1.44-3.78-3.03-5.14l-1.29-1.03
+c-0.4-0.32-0.95-0.77-0.95-1.57c0-0.81,0.55-1.33,1.02-1.81c1.51-1.2,3.03-2.55,3.03-5.27c0-1.043-0.243-1.892-0.591-2.59L35,13.571
+v3.706c-0.595,0.346-1,0.984-1,1.723v6c0,1.104,0.896,2,2,2s2-0.896,2-2v-6C38,18.262,37.595,17.624,37,17.277z M30.8,35.49
+c0,2.27-1.83,3.97-5.3,3.97c-3.86,0-6.34-1.87-6.34-4.48s2.3-3.48,3.1-3.78c1.51-0.52,3.46-0.59,3.78-0.59c0.37,0,0.55,0,0.84,0.04
+C29.62,32.63,30.8,33.62,30.8,35.49z M27.92,23.67c-0.58,0.59-1.55,1.03-2.46,1.03c-3.09,0-4.51-4.08-4.51-6.54
+c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C28.82,21.65,28.74,22.82,27.92,23.67z"/>
+</svg>
+            </a>                 
+            
+        </div>
+        <div class="menu-container" onclick=""toggleMob>
+            <ul class="menu">
+                <li><a href="#" onclick="loadContent('about')">About</a></li>
+                <li><a href="#" onclick="loadContent('education')">Education</a></li>
+                <li><a href="#" onclick="loadContent('jobs')">Professional</a></li>
+                <li><a href="#" onclick="loadContent('research')">Research</a></li>
+                <li><a href="#" onclick="loadContent('awards')">Awards & Honors</a></li>
+                <li><a href="#" onclick="loadContent('misc')">Miscellaneous</a></li>
+            </ul>
+              
+        </div>
+        
+        
+
+    </div>
     
-    <h3 class="section_subheader">Reviews</h3>
-    <p>I have reviewed for conferences such as HPDC, QCE and QTML.</p>
+    <div class="right-section" id="content">
+    </div>
+</div>
 
+<footer>
+    <p>&copy; 2025 Sabrina Herbst. All rights reserved.</p>
+</footer>
 
-<h2 class="section_header">Scholarships, Fellowships, Awards & Honors</h2>
-<p>The list below includes scholarships, fellowships, awards and other honors I have received.</p>
-<ol class="misc">
-    <li class="misc_li"><b>Scholarship:</b> I was awarded the <i>Conference Scholarship</i> for female PhD students of the Faculty of Informatics of TU Wien, to travel to QCE 2024 and present our published paper.</li>
-    <li class="misc_li"><b>Scholarship:</b> I was awarded the <i>Siemens Award of Excellence</i> at the 1st TU Wien informatics award ceremony for my academic achievements during my master's degree. <a href="https://www.tuwien.at/tu-wien/aktuelles/news/news/tu-wien-informatics-awards-das-erste-mal-vergeben">Here</a> is an article form TU Wien about the award ceremony.</li>
-    <li class="misc_li"><b>Scholarship:</b> I was awarded the <i>Conference Scholarship</i> for early-career master's students of the Faculty of Informatics of TU Wien, after publishing my first paper, to travel to Euro-Par 2023 in Limassol, Cyprus.</li>
-    <li class="misc_li"><b>Fellowship:</b> I received the <i>ETH Zürich Student Summer Research Fellowship</i>, where I was selected for a 20-person program out of 2,500 applicants for a 2-month research visit in Zurich, Switzerland in 2023. <a href="https://inf.ethz.ch/news-and-events/spotlights/infk-news-channel/2023/07/ssrf-2023.html">Here</a> is an article of ETH Zürich, describing the program.</li>
-    <li class="misc_li"><b>Participant:</b> My application to participate in the <i>OpenAI Climate Change Hackathon 2022</i> was accepted.</li>
-    <li class="misc_li"><b>Scholarship:</b> I was awarded the <i>Huawei Seeds for the Future scholarship</i> for my academic achievements during my bachelor's degree. <a href="https://www.tuwien.at/tu-wien/aktuelles/news/news/44-mint-studierende-freuen-sich-ueber-digitalisierungsstipendium">Here</a> is an article of TU Wien describing the scholarship and event.</li>
-    <li class="misc_li"><b>Scholarship:</b> Based on my academic achievements, I was a two-times recipient of the <i>merit-based scholarship</i> at TU Wien in 2019 and 2021.</li>
-    <li class="misc_li"><b>National Champion:</b> Before I started my academic career, I won the Austrian National Championship in Badminton in 2017 and 2018. I won several youth championships and attended two European Youth Championships.</li>
-</ol>
+<script>
 
-<h2 class="section_header">Miscellaneous</h2>
-    
-    <h3 class="section_subheader">Project Work</h3>
-        <p>Throughout my studies and in my spare time I have worked on several projects.</p>
-        <p>For the sake of keeping this page readable, I outsourced my project page to <a href="projects.html">here</a>.</p>
+    function toggleDescription(paragraph, text) {
+    var paragraph = document.querySelector(paragraph);
+    var toggleText = document.querySelector(text);
 
-    <h3 class="section_subheader">Personal</h3>
-        <ol class="misc">
-            <li class="misc_li">I started doing <b>Jujitsu</b> in 2023 and am an orange-belt for now.</li>
-            <li class="misc_li">I deeply care about <b>climate change</b> and think a lot about how to use technology to find solutions. This has resulted in my participation in the <i>OpenAI Climate Change Hackathon</i> in 2021 and the <i>Capgemini Sustainability Data Science Challenge</i> in 2021.</li>
-            <li class="misc_li">I used to play <b>Badminton</b> professionally and eventually won the Austrian National Championships in Women's Doubles at 16. I found this old video of me at the last European Championships I played in <a href="https://www.youtube.com/watch?v=99uDmayJzzU">here</a>, if you're interested.</li>
-            <li class="misc_li">I read a lot in my free time.</li>
-            <li class="misc_li">I have a deep love for <b>music</b>, played the Guitar for a long time and even had singing lessons at some point.</li>
-        </ol>
-    </body>
+    if (paragraph.style.display === "none") {
+        paragraph.style.display = "block";
+        toggleText.textContent = "Hide description";
+    } else {
+        paragraph.style.display = "none";
+        toggleText.textContent = "Show description";
+    }
+    }
 
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const action = urlParams.get('action');
+    if (action) {
+        loadContent(action);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (action) {
+            loadContent(action);
+        } else {
+            loadContent('about');
+        }
+    });
+
+    function loadContent(section) {
+        const contentDiv = document.getElementById('content');
+        let content = '';
+
+        const newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + "?action=" + section;
+        history.pushState({ action: section }, '', newURL);
+        
+        if (section === 'education') {
+            content = `
+                <h2>Education</h2>
+                <ul class="education">
+                    <li><h3>Doctor in Engineering Sciences (Computer Science), TU Wien, Vienna, Austria<br> 03/2024 - today</h3>
+                        <p>I do research on the intersection of Quantum Computing, in particular, Algorithms, Machine Learning and HPC at the <a href=https://hpc.ec.tuwien.ac.at/>HPC research group</a> with Univ.Prof.in Dr.in Ivona Brandić.<br>
+                            I am part of the doctoral school of the Center of Artificial Intelligence and Machine Learning (<a href=https://caiml.org/>CAIML</a>) of TU Wien and I am co-supervised by Prof. Sabine Andergassen.</li>
+                    <li><h3>Master in Data Science (Dipl.-Ing.), TU Wien, Vienna, Austria<br> 10/2021 - 11/2023</h3>
+                        <p>I focussed on Machine Learning and Big Data & High Performance Computing. <br>
+                            I did an internship at Mercedes-Benz Tech Innovation, which was partially funded through the Erasmus+ program in 2021.</p>
+                        <p><strong>Thesis</strong>: Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperparameter Optimization in Quantum Machine Learning (<a href=https://repositum.tuwien.at/handle/20.500.12708/189283>Link</a>).<br>
+                            <strong>Supervisor</strong>: Univ.Prof.in Dr.in Ivona Brandić. <br>
+                            Graduated with distinction with a GPA of 1.0 (highest in Austria). Furthermore, I was awarded the Siemens Award of Excellence at the 1st TU Wien informatics award ceremony for my academic achievements (<a href=https://www.tuwien.at/tu-wien/aktuelles/news/news/tu-wien-informatics-awards-das-erste-mal-vergeben>Link</a>).</p></li>
+                        </p></li>
+                    <li><h3>Bachelor in Business Informatics (BSc), TU Wien, Vienna, Austria<br> 10/2018 - 09/2021</h3>
+                        <p>I focussed on Infomation Technology.</p>
+                        <p><strong>Thesis</strong>: Analysis of Bacteriophage Cocktails: Predicting Hosts of Bacteriophages Based on Molecular Sequence Data.<br>
+                            <strong>Supervisor</strong>: Univ.Prof. Dr. Thomas Gärtner.<br>
+                            Graduated with distinction with a GPA of 1.4.</p></li>
+                    <li><h3>Matura (Upper Secondary School), B.ORG Dornbirn-Schoren, Dornbirn, Austria<br> 09/2014 - 06/2018</h3>
+                        <p>My upper secondary school had a focus on Music.</p>
+                        <p>Graduated with distinction with a GPA of 1.14.</li>
+                </ul>
+            `;
+        } else if (section === 'jobs') {
+            content = `
+                <h2>Professional</h2>
+                <ul>
+                    <li><h3>Project Assistant (Prae-Doc) FWF, TU Wien, Vienna, Austria<br> 03/2024 - today</h3>
+                        <p>I do research on Quantum Computing, specifically, Algorithms, Machine Learning and the integration of HPC. <br>
+                             My work has been funded through the <a href=https://www.fwf.ac.at/forschungsradar/10.55776/P36870>Triton</a> - Transprecise Edge Computing project, as well as the <a href=https://hpc.ec.tuwien.ac.at/themis>Themis</a> - Trustworthy and Sustainable Code Offloading project of FWF.</p></li>
+                    <li><h3>Student Summer Research Fellow, ETH Zürich, Zürich, Switzerland<br> 07/2023 - 08/2023</h3>
+                        <p>I  was accepted for a 20-person programme out of 2,500 applicants to take part in the two-month Student Summer Research Fellowship at ETH Zürich.<br>
+                            I was working on the efficiency of Large Language Models, in particular, finding ways to prune the models without the need to retrain afterwards. <br>
+                            <strong>Supervisor</strong>: Prof. Thomas Hofmann</p></li>
+                    <li><h3>Student Researcher, TU Wien, Vienna, Austria<br> 05/2023 - 02/2024</h3>
+                        <p>I worked on benchmarking hyperparameters of Quantum Machine Learning models with the goal of providing researchers and practitioners with good starting points for model architectures. <br>
+                            The work was funded through the <a href=https://projekte.ffg.at/projekt/4562957>HPQC</a> - High Performance integrated Quantum Computing project of FFG and the <a href=https://www.fwf.ac.at/forschungsradar/10.55776/P36870>Triton</a> - Transprecise Edge Computing project of FWF.</p></li>
+                    <li><h3>Internship Electric Vehicles, Mercedes-Benz Tech Innovation, Stuttgart, Germany<br> 03/2022 - 05/2022</h3>
+                        <p>I conducted Data Science projects in the electric vehicle environment. The work included identifying and preprocessing appropriate datasets, as well as investigating, training and the evaluation of Natural Language Processing (NLP) models. <br>
+                            My internship was supported through the Erasmus+ program.</p></li>
+                    <li><h3>Junior SAP Consultant, HCM ADVICE, Vienna, Austria<br> 02/2021 - 12/2021</h3>
+                        <p>I analyzed customer requirements and identified optimization potential. Further, I resolved customer tickets in SAP SuccessFactors and SAP HCM and communicated about ongoing progress with customers.</p></li>
+                    <li><h3>Tutor, TU Wien, Vienna, Austria<br> 10/2019 - 02/2021</h3>
+                        <p>Throughout my bachelor's degree, I was asked to be a tutor in the classes "Introduction to Programming 1", "Fundamentals of Programming & Algorithms" and the "Remedial Course for Informatics". I had to opportunity to work directly with the studens by helping them with their classwork and checking their exercises.</p></li>
+                    <li><h3>Intern, Austrian Institute of Technology, Vienna, Austria<br> 07/2020 - 09/2020</h3>
+                        <p>Throughout this internship, I helped create the Austrian Startup Monitor. In particular, I was doing research on startups in Austria and maintained the database.</p></li>
+                    </ul>
+            `;
+        } else if (section === 'contact') {
+            content = `
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></p>
+            `;
+        } else if (section === 'about') {
+            content = `
+                <h2>Hi 👋</h2>
+                <p>I am Sabrina and I am a PhD candidate at TU Wien, working on Quantum Computing, specifically, Machine Learning and HPC integration.&#128171;</p>
+                <p>I am part of the HPC research group, working with Prof. Ivona Brandić and am co-supervised as part of the doctoral school of the Center of Artificial Intelligence and Machine Learning (<a href="https://caiml.org/">CAIML</a>) by Prof. Sabine Andergassen.</p>
+                <p>My work so-far has been funded through the FWF <a href=https://hpc.ec.tuwien.ac.at/triton>Triton</a> - Transprecise Edge Computing project, FFG's flagship project <a href=https://projekte.ffg.at/projekt/4562957>HPQC</a> - High Performance integrated Quantum Computing, and, currently, through the <a href=https://hpc.ec.tuwien.ac.at/themis>Themis</a> - Trustworthy and Sustainable Code Offloading project of FWF.</p>
+                <p>My goal is to develop scalable Quantum Machine Learning algorithms, both from theory, as well as pushing for robust numerics. Beyond that, I am interested in the intersection of Quantum Computing and HPC, in particular, augmenting quantum computations through HPC.</p>
+                <p>Feel free to get in touch via <a href="mailto:sabrina.herbst@tuwien.ac.at">email</a> or find me on Bluesky as <a href="https://bsky.app/profile/sabrinaherbst.bsky.social">@sabrinaherbst</a>.</p>
+                
+                <h2>News</h2>
+                <ul>
+                    <li><strong>PC Member</strong> - 02/2024: I am a PC Member in the Artifact Evaluation Track for CCGrid 2025.</li>
+                    <li><strong>ICLR 2025</strong> - 01/2025: Our paper <em>"Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks"</em> discussing an ansatz-centric perspective on training dynamics in QNNs has been accepted to ICLR 2025. You can find the paper <a href=https://arxiv.org/abs/2410.09470>here</a>.</li>
+                    <li><strong>Conference Scholarship</strong> - 12/2024: I have been awarded the <em>Conference Scholarship</em> for female PhD students of the Faculty of Informatics of TU Wien, to travel to QCE 2024 and present our published paper.</li>
+                    <li><strong>QCE 2024</strong> - 07/2024: Our paper <em>"On Optimizing Hyperparameters for Quantum Neural Networks"</em> has been accepted to QCE 2024. You can find the paper <a href=https://doi.org/10.1109/QCE60285.2024.00174>here</a>.</li>
+                </ul>   
+                `;
+        } else if (section === 'research') {
+            content = `
+                <h2>Research</h2>
+                <h3>Papers</h3>
+
+                <h4>Publications</h4>
+                <ul>
+                    <li><p><strong>Herbst, S.</strong>, Cranganore, S.S., De Maio, V., Brandić, I. (2024). <em>"Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks"</em>. In: The Thirteenth International Conference on Learning Representations (ICLR) 2025, Singapore, Apr 24-28, 2025. <a href=https://openreview.net/forum?id=gDcL7cgZBt>openreview.com</a>.</p>
+                    <div class="foldable-container">
+                        <span class="toggle-text" id='iclr_25_text' onclick="toggleDescription('#iclr_25_paragraph', '#iclr_25_text')">Show description</span>
+                        <p class="foldable-paragraph" id='iclr_25_paragraph'>We propose an ansatz-centric perspective on QNNs. In particular, from the literature, we gather results that heuristically show that having an ansatz form an (approximate) 2-design is not a sufficient criterion for expressivity. Further, we study distinguishability of quantum channels upon perturbing parameters (i.e., similar to a parameter update during training), suggesting many parameters are required to be able to distinguish the QNN from itself upon parameter update, contrasting with the initial framework. The behavior we find on an architectural level has remarkable resemblance to the Barren Plateau phenomenon, suggesting that the architectures themselves are fundamentally flawed.</p>
+                    </div>
+                    </li>
+                    <li><p><strong>Herbst, S.</strong>, De Maio, V., Brandić, I. (2024). <em>"On Optimizing Hyperparameters for Quantum Neural Networks"</em>. In: 2024 IEEE International Conference on Quantum Computing and Engineering (QCE), Montreal, QC, Canada, 2024, pp. 1478-1489. doi: <a href=https://doi.org/10.1109/QCE60285.2024.00174>10.1109/QCE60285.2024.00174</a>.</p>
+                    <div class="foldable-container">
+                        <span class="toggle-text" id="qce_24_text" onclick="toggleDescription('#qce_24_paragraph', '#qce_24_text')">Show description</span>
+                        <p class="foldable-paragraph" id="qce_24_paragraph">We benchmarked a variety of different hyperparameters on four problems. We included parameter initialization strategies for mitigating trainability issues, such as Barren Plateaus. Furthremore, given the noise inherent in NISQ technology, we included noise in the simulators to compare with the noiseless simulations.</p>
+                    </div>
+                    </li>
+                    <li><p><strong>Herbst, S.</strong>, De Maio, V., Brandic, I. (2024). <em>"Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case"</em>. In: Zeinalipour, D., et al. Euro-Par 2023: Parallel Processing Workshops. Euro-Par 2023. Lecture Notes in Computer Science, vol 14351. Springer, Cham. doi: <a href=https://doi.org10.1007/978-3-031-50684-0_14>10.1007/978-3-031-50684-0_14</a>. Limassol, Cyprus.</p>
+                    <div class="foldable-container">
+                        <span class="toggle-text" id="quickpar_23_text" onclick="toggleDescription('#quickpar_23_paragraph', '#quickpar_23_text')">Show description</span>
+                        <p class="foldable-paragraph" id="quickpar_23_paragraph">We wrote a paper for the QuickPar workshop at Euro-Par 2023 on our idea of the Quantum Edge. The paper made it into Quantum Zeitgeist, where it was summarized. The article can be found <a href=http://quantumzeitgeist.com/vienna-university-researchers-develop-quantum-edge-for-efficient-iot-data-streaming/>here</a>.</p>
+                    </div>
+                    </li>
+
+                </ul>
+
+                <!--<h4>Preprints</h4>-->
+
+                <h4>Theses</h4>
+                <ul>
+                    <li><p>Herbst, S. (2023). <em>"Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperparameter Optimization in Quantum Machine Learning</em> (Diploma Thesis, Wien). doi: <a href=https://doi.org/10.34726/hss.2023.111504>10.34726/hss.2023.111504</a>.</p>
+                    <div class="foldable-container">
+                        <span class="toggle-text" id="master_thesis_text" onclick="toggleDescription('#master_thesis_paragraph', '#master_thesis_text')">Show description</span>
+                        <p class="foldable-paragraph" id="master_thesis_paragraph">We benchmarked diffferent hyperparameter configurations for Quantum Machine Learning models and compared them to classical Machine Learning models, with the goal of providing researchers and practitioners good starting points and a reduced search space for hyperparameter optimization.</p>
+                    </div></li>
+                </ul>
+
+                <h3>Presentations</h3>
+                <ul>
+                    <li><em>On Optimizing Hyperparameters for Quantum Neural Networks</em>. IEEE International Conference on Quantum Computing and Engineering (QCE). 2024. Montreal, Canada.</li>
+                    <li><em>AI for Communication in Hybrid Classic Quantum Systems</em>. CAIML Symposium. 2024. Vienna, Austria.</li>
+                    <li><em>On Hyperparameter Optimization in Quantum Neural Networks</em>. Quantum Optics and Spectroscopy. Institute for Experimental Physics. Universität Innsbruck. 2024. Innsbruck, Austria.</li>
+                    <li><em>Beyond 0’s and 1’s ‑ Exploring the Complexities of Noise, Data Encoding, and Hyperparameter Optimization in Quantum Machine Learning</em> (remote). National Physical Laboratory (NPL). 2023. London, UK.</li>
+                    <li><em>Beyond 0’s and 1’s ‑ Exploring the Complexities of Noise, Data Encoding, and Hyperparameter Optimization in Quantum Machine Learning</em>. Walther Group. Faculty of Physics. University of Vienna. 2023. Vienna, Austria.</li>
+                    <li><em>Streaming IoT Data and the Quantum Edge: A Classic/Quantum Machine Learning Use Case</em>. QuickPar Workshop at EuroPar 2023. Limassol, Cyprus.</li>
+                </ul>
+                
+                <h3>Reviews</h3>
+                <p>I was a PC Member in the Artifact Evaluation Track for CCGrid 2025. Further, I have reviewed for HPDC 2023, and QCE 2024.</p>
+
+                <h3>Teaching</h3>
+                <ul>
+                    <li><em>Hybrid Quantum-Classical Systems</em>. TU Wien. 2024. I teach the lecture on Quantum Machine Learning and help in assignment preparation.</li>
+                </ul>
+            `;
+        } else if (section === 'awards') {
+            content = `
+                <h2>Awards & Honors</h2>
+                <ul>
+                    <li><strong>Conference Scholarship, 2024.</strong> I was awarded the Conference Scholarship for female PhD students of the Faculty of Informatics of TU Wien, to travel to QCE 2024 and present our published paper.</li>
+                    <li><strong>Siemens Award of Excellence, 2023.</strong> I was awarded the Siemens Award of Excellence at the 1st TU Wien informatics award ceremony for my academic achievements during my master's degree. <a href=https://www.tuwien.at/tu-wien/aktuelles/news/news/tu-wien-informatics-awards-das-erste-mal-vergeben>Here</a> is an article form TU Wien about the award ceremony.</li>
+                    <li><strong>Conference Scholarship, 2023.</strong> I was awarded the Conference Scholarship for early-career master's students of the Faculty of Informatics of TU Wien, after publishing my first paper, to travel to Euro-Par 2023 in Limassol, Cyprus.</li>
+                    <li><strong>ETH Zürich Student Summer Research Fellowship, 2023.</strong> I received the ETH Zürich Student Summer Research Fellowship, where I was selected for a 20-person program out of 2,500 applicants for a 2-month research visit in Zurich, Switzerland in 2023. Here is an article of ETH Zürich, describing the program.</li>
+                    <li><strong>OpenAI Climate Change Hackathon, 2022.</strong> My application to participate in the OpenAI Climate Change Hackathon 2022 was accepted.</li>
+                    <li><strong>Huawei Seeds for the Future Scholarship, 2021.</strong> I was awarded the Huawei Seeds for the Future scholarship for my academic achievements during my bachelor's degree. Here is an article of TU Wien describing the scholarship and event.</li>
+                    <li><strong>Merit-based Scholarship, 2019 & 2021.</strong> Based on my academic achievements, I was a two-times recipient of the merit-based scholarship at TU Wien in 2019 and 2021.</li>
+                    <li><strong>National Champion, 2017 & 2018.</strong> Before I started my academic career, I won the Austrian National Championship in Badminton in 2017 and 2018. I won several youth championships and attended two European Youth Championships.</li>
+                </ul>
+            `;
+        } else if (section === 'misc') {
+            content = `
+                <h2>Miscellaneous</h2>
+
+                <ul>
+                    <li>I am volunteering to tutor refugees in Vienna preparing for exams in Mathematics, English and German.</li>
+                    <li>I started doing Jujitsu in 2023 and am an orange-belt for now.</li>
+                    <li>I deeply care about climate change and think a lot about how to use technology to find solutions. This has resulted in my participation in the OpenAI Climate Change Hackathon in 2021 and the Capgemini Sustainability Data Science Challenge in 2021.</li>
+                    <li>I used to play Badminton professionally and eventually won the Austrian National Championships</li>
+                    <li>I read a lot in my free time.</li>
+                    <li>I have a deep love for music, played the Guitar for a long time and even had singing lessons at some point.</li>
+                </ul>
+            `;
+        }
+        
+        contentDiv.innerHTML = content;
+    }
+</script>
+
+</body>
 </html>
-
-
