@@ -148,7 +148,7 @@
             color : var(--textbox-col);
         }
 
-        .education {
+        .education, .professional {
             list-style-type: none;
             margin: 0;
         }
@@ -364,22 +364,26 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
             content = `
                 <h2>Education</h2>
                 <ul class="education">
-                    <li><h3>Doctor in Engineering Sciences (Computer Science), TU Wien, Vienna, Austria<br> 03/2024 - today</h3>
+                    <li><h3>Doctor in Engineering Sciences (Dr.techn.)</h3>
+                        <h4>TU Wien, Vienna, Austria, 03/2024 - today</h4>
                         <p>I do research on the intersection of Quantum Computing, in particular, Algorithms, Machine Learning and HPC at the <a href=https://hpc.ec.tuwien.ac.at/>HPC research group</a> with Univ.Prof.in Dr.in Ivona Brandić.<br>
                             I am part of the doctoral school of the Center of Artificial Intelligence and Machine Learning (<a href=https://caiml.org/>CAIML</a>) of TU Wien and I am co-supervised by Prof. Sabine Andergassen.</li>
-                    <li><h3>Master in Data Science (Dipl.-Ing.), TU Wien, Vienna, Austria<br> 10/2021 - 11/2023</h3>
+                    <li><h3>Master in Data Science (Dipl.-Ing.in.)</h3>
+                        <h4>TU Wien, Vienna, Austria, 10/2021 - 11/2023</h4>
                         <p>I focussed on Machine Learning and Big Data & High Performance Computing. <br>
                             I did an internship at Mercedes-Benz Tech Innovation, which was partially funded through the Erasmus+ program in 2021.</p>
                         <p><strong>Thesis</strong>: Beyond 0's and 1's: Exploring the Impact of Noise, Data Encoding and Hyperparameter Optimization in Quantum Machine Learning (<a href=https://repositum.tuwien.at/handle/20.500.12708/189283>Link</a>).<br>
                             <strong>Supervisor</strong>: Univ.Prof.in Dr.in Ivona Brandić. <br>
                             Graduated with distinction with a GPA of 1.0 (highest in Austria). Furthermore, I was awarded the Siemens Award of Excellence at the 1st TU Wien informatics award ceremony for my academic achievements (<a href=https://www.tuwien.at/tu-wien/aktuelles/news/news/tu-wien-informatics-awards-das-erste-mal-vergeben>Link</a>).</p></li>
                         </p></li>
-                    <li><h3>Bachelor in Business Informatics (BSc), TU Wien, Vienna, Austria<br> 10/2018 - 09/2021</h3>
+                    <li><h3>Bachelor in Business Informatics (BSc)</h3>
+                        <h4>TU Wien, Vienna, Austria, 10/2018 - 09/2021</h4>
                         <p>I focussed on Infomation Technology.</p>
                         <p><strong>Thesis</strong>: Analysis of Bacteriophage Cocktails: Predicting Hosts of Bacteriophages Based on Molecular Sequence Data.<br>
                             <strong>Supervisor</strong>: Univ.Prof. Dr. Thomas Gärtner.<br>
                             Graduated with distinction with a GPA of 1.4.</p></li>
-                    <li><h3>Matura (Upper Secondary School), B.ORG Dornbirn-Schoren, Dornbirn, Austria<br> 09/2014 - 06/2018</h3>
+                    <li><h3>Matura (Upper Secondary School)</h3>
+                        <h4>B.ORG Dornbirn-Schoren, Dornbirn, Austria, 09/2014 - 06/2018</h4>
                         <p>My upper secondary school had a focus on Music.</p>
                         <p>Graduated with distinction with a GPA of 1.14.</li>
                 </ul>
@@ -387,25 +391,32 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
         } else if (section === 'jobs') {
             content = `
                 <h2>Professional</h2>
-                <ul>
-                    <li><h3>Project Assistant (Prae-Doc) FWF, TU Wien, Vienna, Austria<br> 03/2024 - today</h3>
+                <ul class='professional'>
+                    <li><h3>Project Assistant (Prae-Doc) FWF</h3>
+                        <h4>TU Wien, Vienna, Austria, 03/2024 - today</h4>
                         <p>I do research on Quantum Computing, specifically, Algorithms, Machine Learning and the integration of HPC. <br>
                              My work has been funded through the <a href=https://www.fwf.ac.at/forschungsradar/10.55776/P36870>Triton</a> - Transprecise Edge Computing project, as well as the <a href=https://hpc.ec.tuwien.ac.at/themis>Themis</a> - Trustworthy and Sustainable Code Offloading project of FWF.</p></li>
-                    <li><h3>Student Summer Research Fellow, ETH Zürich, Zürich, Switzerland<br> 07/2023 - 08/2023</h3>
+                    <li><h3>Student Summer Research Fellow</h3>
+                        <h4>ETH Zürich, Zürich, Switzerland, 07/2023 - 08/2023</h4>
                         <p>I  was accepted for a 20-person programme out of 2,500 applicants to take part in the two-month Student Summer Research Fellowship at ETH Zürich.<br>
                             I was working on the efficiency of Large Language Models, in particular, finding ways to prune the models without the need to retrain afterwards. <br>
                             <strong>Supervisor</strong>: Prof. Thomas Hofmann</p></li>
-                    <li><h3>Student Researcher, TU Wien, Vienna, Austria<br> 05/2023 - 02/2024</h3>
+                    <li><h3>Student Researcher</h3>
+                        <h4>TU Wien, Vienna, Austria, 05/2023 - 02/2024</h4>
                         <p>I worked on benchmarking hyperparameters of Quantum Machine Learning models with the goal of providing researchers and practitioners with good starting points for model architectures. <br>
                             The work was funded through the <a href=https://projekte.ffg.at/projekt/4562957>HPQC</a> - High Performance integrated Quantum Computing project of FFG and the <a href=https://www.fwf.ac.at/forschungsradar/10.55776/P36870>Triton</a> - Transprecise Edge Computing project of FWF.</p></li>
-                    <li><h3>Internship Electric Vehicles, Mercedes-Benz Tech Innovation, Stuttgart, Germany<br> 03/2022 - 05/2022</h3>
+                    <li><h3>Internship Electric Vehicle</h3>
+                        <h4>Mercedes-Benz Tech Innovation, Stuttgart, Germany, 03/2022 - 05/2022</h4>
                         <p>I conducted Data Science projects in the electric vehicle environment. The work included identifying and preprocessing appropriate datasets, as well as investigating, training and the evaluation of Natural Language Processing (NLP) models. <br>
                             My internship was supported through the Erasmus+ program.</p></li>
-                    <li><h3>Junior SAP Consultant, HCM ADVICE, Vienna, Austria<br> 02/2021 - 12/2021</h3>
+                    <li><h3>Junior SAP Consultant</h3>
+                        <h4>HCM ADVICE, Vienna, Austria, 02/2021 - 12/2021</h4>
                         <p>I analyzed customer requirements and identified optimization potential. Further, I resolved customer tickets in SAP SuccessFactors and SAP HCM and communicated about ongoing progress with customers.</p></li>
-                    <li><h3>Tutor, TU Wien, Vienna, Austria<br> 10/2019 - 02/2021</h3>
+                    <li><h3>Tutor</h3>
+                        <h4>TU Wien, Vienna, Austria, 10/2019 - 02/2021</h4>
                         <p>Throughout my bachelor's degree, I was asked to be a tutor in the classes "Introduction to Programming 1", "Fundamentals of Programming & Algorithms" and the "Remedial Course for Informatics". I had to opportunity to work directly with the studens by helping them with their classwork and checking their exercises.</p></li>
-                    <li><h3>Intern, Austrian Institute of Technology, Vienna, Austria<br> 07/2020 - 09/2020</h3>
+                    <li><h3>Intern</h3>
+                        <h4>Austrian Institute of Technology, Vienna, Austria, 07/2020 - 09/2020</h4>
                         <p>Throughout this internship, I helped create the Austrian Startup Monitor. In particular, I was doing research on startups in Austria and maintained the database.</p></li>
                     </ul>
             `;
@@ -473,6 +484,8 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
 
                 <h3>Presentations</h3>
                 <ul>
+                    <li><em>Exploring the model space in Quantum Neural Networks</em>. CAIML Symposium 2025. 2025. Vienna, Austria.</li>
+                    <li>Poster: <em> Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks</em>. The Thirteenth International Conference on Learning Representations (ICLR). 2025. Singapore.</li>
                     <li><em>On Optimizing Hyperparameters for Quantum Neural Networks</em>. IEEE International Conference on Quantum Computing and Engineering (QCE). 2024. Montreal, Canada.</li>
                     <li><em>AI for Communication in Hybrid Classic Quantum Systems</em>. CAIML Symposium. 2024. Vienna, Austria.</li>
                     <li><em>On Hyperparameter Optimization in Quantum Neural Networks</em>. Quantum Optics and Spectroscopy. Institute for Experimental Physics. Universität Innsbruck. 2024. Innsbruck, Austria.</li>
@@ -482,7 +495,7 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
                 </ul>
                 
                 <h3>Reviews</h3>
-                <p>I was a PC Member in the Artifact Evaluation Track for CCGrid 2025. Further, I have reviewed for HPDC 2023, and QCE 2024.</p>
+                <p>I was a PC Member in the Artifact Evaluation Track for CCGrid 2025. Further, I have reviewed for HPDC, QTML and IEEE QCE.</p>
 
                 <h3>Teaching</h3>
                 <ul>
@@ -507,12 +520,11 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
             content = `
                 <h2>Miscellaneous</h2>
 
-                <ul>
-                    <li>I am volunteering to tutor refugees in Vienna preparing for exams in Mathematics, English and German.</li>
-                    <li>I started doing Jujitsu in 2023 and am an orange-belt for now.</li>
-                    <li>I deeply care about climate change and think a lot about how to use technology to find solutions. This has resulted in my participation in the OpenAI Climate Change Hackathon in 2021 and the Capgemini Sustainability Data Science Challenge in 2021.</li>
-                    <li>I used to play Badminton professionally and eventually won the Austrian National Championships</li>
-                    <li>I read a lot in my free time.</li>
+                <ul class='misc'>
+                    <li>I am a volunteer tutor at project Karibu of <strong>Diakonie Vienna</strong> in Mathematics, English and German.</li>
+                    <li>I started doing <strong>Jujitsu</strong> in 2023 and am an orange-belt for now.</li>
+                    <li>My application to participate in the <strong>OpenAI Climate Change Hackathon</strong> was accepted. We integrated Large Language Models with a web frontend to search climate policies and amde it into Climate Policy Radar's <a href=https://www.climatepolicyradar.org/latest/hacking-ai-for-climate-policy>blog</a></li>
+                    <li>I was a <strong>professional Badminton athlete</strong> in my youth. I won the Austrian National Championship in women's doubles twice, participatd in two European Youth Championships and won seeral Youth National Championships.</li>
                     <li>I have a deep love for music, played the Guitar for a long time and even had singing lessons at some point.</li>
                 </ul>
             `;
