@@ -420,12 +420,6 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
                         <p>Throughout this internship, I helped create the Austrian Startup Monitor. In particular, I was doing research on startups in Austria and maintained the database.</p></li>
                     </ul>
             `;
-        } else if (section === 'contact') {
-            content = `
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></p>
-            `;
         } else if (section === 'about') {
             content = `
                 <h2>Hi 👋</h2>
@@ -437,12 +431,11 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
                 
                 <h2>News</h2>
                 <ul>
+                    <li><strong>Preprint</strong> - 12/2025: The preprint of our papper <em>"Limits of quantum generative models with classical sampling hardness"</em> is available on <a href=https://doi.org/10.48550/arXiv.2512.24801>ArXiv</a>.</li>
                     <li><strong>NetIdee Scholarship</strong> - 11/2025: I have received a NetIdee scholarship from the Internet Foundation Austria for my PhD thesis.</li>
                     <li><strong>Dieberger-Skalicky Scholarship</strong> - 06/2025: I have been awarded the <em>Dieberger-Skalicky Scholarship</em> for conference travels, research visits and other materials.</li>
                     <li><strong>PC Member</strong> - 02/2025: I am a PC Member in the Artifact Evaluation Track for CCGrid 2025.</li>
                     <li><strong>ICLR 2025</strong> - 01/2025: Our paper <em>"Exploring Channel Distinguishability in Local Neighborhoods of the Model Space in Quantum Neural Networks"</em> discussing an ansatz-centric perspective on training dynamics in QNNs has been accepted to ICLR 2025. You can find the paper <a href=https://arxiv.org/abs/2410.09470>here</a>.</li>
-                    <li><strong>Conference Scholarship</strong> - 12/2024: I have been awarded the <em>Conference Scholarship</em> for female PhD students of the Faculty of Informatics of TU Wien, to travel to QCE 2024 and present our published paper.</li>
-                    <li><strong>QCE 2024</strong> - 07/2024: Our paper <em>"On Optimizing Hyperparameters for Quantum Neural Networks"</em> has been accepted to QCE 2024. You can find the paper <a href=https://doi.org/10.1109/QCE60285.2024.00174>here</a>.</li>
                 </ul>   
                 `;
         } else if (section === 'research') {
@@ -473,7 +466,15 @@ c0-0.95,0.19-1.94,0.8-2.7c0.58-0.75,1.59-1.22,2.52-1.22c3,0,4.55,4.11,4.55,6.76C
 
                 </ul>
 
-                <!--<h4>Preprints</h4>-->
+                <h4>Preprints</h4>
+                <ul>
+                    <li><p><strong>Herbst, S.</strong>, Brandić, I., Pérez-Salinas, A. (2025). <em>"Limits of quantum generative models with classical sampling hardness"</em>. arXiv:2410.2512.24801 [quant‑ph]. doi: <a href=https://doi.org/10.48550/arXiv.2512.24801>10.48550/arXiv.2512.24801</a>.</p>
+                    <div class="foldable-container">
+                        <span class="toggle-text" id='gqml-samppling' onclick="toggleDescription('#gqml-sampling_paragraph', '#gqml-sampling')">Show description</span>
+                        <p class="foldable-paragraph" id='gqml-sampling_paragraph'>The paper discusses the behavior of loss functions for generative QML models. We consider three different circuit types, related to product states, quantum supremacy circuits showing classical sampling hardness, and peaked quantum circuit, show their (anti)concentration properties and anaylse loss function concentration. Most notably, we find that the anticoncentration reuqired for classical sampling hardness inherently implies strong loss function concentration, rendering the models untrainable. We further connect the results to verification and discuss implications for QML.</p>
+                    </div>
+                </ul>
+                
 
                 <h4>Theses</h4>
                 <ul>
